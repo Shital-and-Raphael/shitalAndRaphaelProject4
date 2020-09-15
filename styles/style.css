@@ -242,3 +242,60 @@ header {
   background-size: cover;
   height: 25vh;
 }
+
+.wrapper {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-image: url(../images/headerImage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+main {
+  height: 60vh;
+}
+
+form {
+  width: 100%;
+}
+
+form input {
+  width: 70%;
+  height: 50px;
+}
+
+form button {
+  background-color: lavender;
+  padding: 10px;
+  width: 25%;
+  cursor: pointer;
+}
+
+form input, form button {
+  margin-top: 30px;
+}
+
+footer {
+  background-color: gray;
+  padding: 5px;
+  text-align: center;
+}
+
+footer a {
+  color: #ea593e;
+}
