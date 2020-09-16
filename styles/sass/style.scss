@@ -1,58 +1,74 @@
 @import 'setup';
 
-
-header {
-    background-image: url(../images/headerImage.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 25vh;
+body {
+  font-size: 62.5%;
 }
 
 .wrapper {
-    max-width: 1024px;
-    width: 90%;
-    margin: 0 auto;
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,a,h1,h2 {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url(../images/headerImage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+main {
+  min-height: 75vh;
+  // height: 75vh;
+  // display: contents;
+}
+
+form {
+  width: 100%;
+
+  input {
+    width: 70%;
+    height: 50px;
   }
+
+  button {
+    background-color: blue;
+    padding: 10px;
+    width: 25%;
+    cursor: pointer;
+  }
+
+  input,
+  button {
+    margin-top: 30px;
+  }
+}
+
+footer {
+  background-color: gray;
+  padding: 5px;
+  text-align: center;
+  height: 5vh;
+
   a {
-    text-decoration: none;
+    color: #ea593e;
   }
-  header {
-    background-image: url(../images/headerImage.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 25vh;
-  }
-  h1 {
-    text-align: center;
-    padding-top: 20px;
-  }
-  main {
-    height: 60vh;
-    display: contents;
-  }
-  form {
-    width: 100%;
-    input {
-      width: 70%;
-      height: 50px;
-    }
-    button {
-      background-color: blue;
-      padding: 10px;
-      width: 25%;
-      cursor: pointer;
-    }
-    input,button {
-        margin-top: 30px;
-    }
-  }
-  footer {
-    background-color: gray;
-    padding: 5px;
-    text-align: center;
-    a {
-      color: #ea593e;
-    }
-  }
+}
