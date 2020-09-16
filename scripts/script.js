@@ -34,7 +34,9 @@ $('form').on('submit', function(event) {
 
 moviesApp.displayMovies = function(movie) {
     movie.forEach((piece) => {
-        const title = $('h2').text(piece.title);
+        console.log(piece);
+        const title = $('<h2>').text(piece.title);
+        $('#results').append(title);
     });
 }
 moviesApp.init = function (){
