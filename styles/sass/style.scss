@@ -86,7 +86,9 @@ footer {
   padding: 5px;
   text-align: center;
   height: 5vh;
+  min-height: 75px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
