@@ -16,7 +16,9 @@ moviesApp.getMovies = function (query) {
       query: query,
     },
   }).then((res) => {
-    console.log(res);
+    console.log(res.results);
+    $('#results').empty();
+    moviesApp.displayMovies(res.results);
   });
 };
 
@@ -25,12 +27,17 @@ $('form').on('submit', function(event) {
     // console.log(" Lets's submit!");
     event.preventDefault();
     const userSearch = $('input').val();
-    console.log(userSearch);
-    // moviesApp.getMovies(userSearch);
+    // console.log(userSearch);
+    moviesApp.getMovies(userSearch);
 })
 }
+
+moviesApp.displayMovies = function(movie) {
+    movie.forEach((piece) => {
+        const title = $('h2').text(piece.title);
+    });
+}
 moviesApp.init = function (){
-    moviesApp.getMovies();
     moviesApp.userInput();
 };
 
