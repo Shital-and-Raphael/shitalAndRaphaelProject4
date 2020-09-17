@@ -383,7 +383,8 @@ footer a {
 }
 
 .movie-container .info .overview {
-  padding: 20px 0;
+  padding: 10px 0;
+  line-height: 20px;
 }
 
 .movie-container .info h2 {
@@ -392,5 +393,5 @@ footer a {
 }
 
 .movie-container .image-container {
-  width: 40%;
+  width: 20%;
 }
