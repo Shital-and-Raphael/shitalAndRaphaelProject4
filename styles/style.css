@@ -317,6 +317,7 @@ form input {
   width: 70%;
   height: 50px;
   border: 2px solid #1a1919;
+  padding-left: 20px;
 }
 
 form button {
@@ -378,6 +379,15 @@ footer a {
   width: 60%;
 }
 
+.movie-container .info .dateAndRatings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .movie-container .info .release-date {
   margin-bottom: 10px;
 }
@@ -392,6 +402,22 @@ footer a {
   margin: 10px 0 20px;
 }
 
+.movie-container .info .trailer {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+}
+
 .movie-container .image-container {
-  width: 20%;
+  width: 30%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

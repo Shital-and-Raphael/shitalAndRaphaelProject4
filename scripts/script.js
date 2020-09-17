@@ -1,4 +1,3 @@
-
 // creating our app object
 const moviesApp = {};
 
@@ -44,8 +43,10 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
   console.log(trailers);
   let videoHtml = "";
   trailers.results.forEach((trailer) => {
-      //https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+    //https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+
     videoHtml += `<a href="https://www.youtube.com/watch?v=${trailer.key}" target="_blank" rel="noopener noreferrer">${trailer.name}</a>`;
+    trailerKey = `${trailer.key}`
   });
 
   $("#results").append(`
@@ -54,10 +55,13 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
         <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt=""></div>
       <div class='info'>
         <h2>${movie.title}</h2>
-        <p class='release-date'>Release date: ${movie.release_date}</p>
-        <p>Ratings: ${movie.vote_average}</p>
+        <div class= dateAndRatings>
+          <p class='release-date'>Release date: ${movie.release_date}</p>
+          <p>Ratings: ${movie.vote_average}</p>
+        </div>
         <p class='overview'>${movie.overview}</p>
         <p>${videoHtml}</p>
+        <iframe class="trailer" src="https://www.youtube.com/embed/${trailerKey}" frameborder="1px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div>
     </div>
     `);
