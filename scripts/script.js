@@ -45,8 +45,8 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
   trailers.results.forEach((trailer) => {
     //https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
 
-    videoHtml += `<a href="https://www.youtube.com/watch?v=${trailer.key}" target="_blank" rel="noopener noreferrer">${trailer.name}</a>`;
-    trailerKey = `${trailer.key}`
+    videoHtml += `<li><a href="https://www.youtube.com/watch?v=${trailer.key}" target="_blank" rel="noopener noreferrer">${trailer.name}</a></li>`;
+    trailerKey = `${trailer.key}`;
   });
 
   $("#results").append(`
@@ -60,9 +60,13 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
           <p>Ratings: ${movie.vote_average}</p>
         </div>
         <p class='overview'>${movie.overview}</p>
-        <p>${videoHtml}</p>
-        <iframe class="trailer" src="https://www.youtube.com/embed/${trailerKey}" frameborder="1px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div>
+        
+        <ul>${videoHtml}</ul>
+        </ul>  
+        <div class="trailer-container">
+          <iframe class="trailer" src="https://www.youtube.com/embed/${trailerKey}" frameborder="1px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
     `);
 };

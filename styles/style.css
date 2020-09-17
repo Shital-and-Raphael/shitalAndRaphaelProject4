@@ -256,12 +256,22 @@ img {
 
 a {
   text-decoration: none;
+  color: #090b64;
+  line-height: 22px;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 p,
 a,
 h1,
-h2 {
+h2,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -299,8 +309,9 @@ header .header-container {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   text-align: center;
+  font-family: 'Tulpen One', cursive;
 }
 
 main {
@@ -324,6 +335,7 @@ form button {
   background-color: black;
   padding: 10px;
   width: 25%;
+  height: 50px;
   cursor: pointer;
   color: #ddc6c6;
 }
@@ -359,12 +371,9 @@ form button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .movie-container .info .dateAndRatings {
@@ -390,8 +399,18 @@ form button {
   margin: 10px 0 20px;
 }
 
+.movie-container .info .trailer-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .movie-container .info .trailer {
-  margin-top: 20px;
+  margin: 15px 0;
   width: 65%;
   height: 213px;
 }
