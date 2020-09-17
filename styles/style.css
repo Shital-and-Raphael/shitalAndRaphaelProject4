@@ -311,7 +311,7 @@ header .header-container {
 h1 {
   font-size: 7rem;
   text-align: center;
-  font-family: 'Tulpen One', cursive;
+  font-family: "Tulpen One", cursive;
 }
 
 main {
@@ -334,10 +334,11 @@ form input {
 form button {
   background-color: black;
   padding: 10px;
-  width: 25%;
+  width: 29.5%;
   height: 50px;
   cursor: pointer;
   color: #ddc6c6;
+  border-radius: 10px;
 }
 
 form input,
@@ -383,6 +384,10 @@ form button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.movie-container .info .dateAndRatings span {
+  font-weight: bold;
 }
 
 .movie-container .info .release-date {
@@ -452,4 +457,89 @@ footer {
 
 footer a {
   color: #ea593e;
+}
+
+@media (max-width: 925px) {
+  form input {
+    width: 69.5%;
+  }
+}
+
+@media (max-width: 800px) {
+  .movie-container .image-container {
+    width: 60%;
+  }
+  .movie-container .info .overview {
+    line-height: 15px;
+  }
+  .movie-container .info .trailer {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  .movie-container .info .dateAndRatings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  a {
+    line-height: 20px;
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .movie-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .movie-container .image-container,
+  .movie-container .info {
+    width: 100%;
+  }
+  .movie-container .image-container {
+    background-color: #131212;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .movie-container .image-container img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  form input,
+  form button {
+    width: 100%;
+  }
+  form button {
+    margin-top: 15px;
+  }
+}
+
+button:hover,
+button:focus {
+  background-color: #570303;
+}
+
+.button:active {
+  background-color: #222222;
+  -webkit-box-shadow: 0 5px #666;
+          box-shadow: 0 5px #666;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }

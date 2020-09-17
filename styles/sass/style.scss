@@ -65,9 +65,8 @@ h1 {
   font-size: 7rem;
   text-align: center;
   // font-family: 'Courgette', cursive;
-  font-family: 'Tulpen One', cursive;
+  font-family: "Tulpen One", cursive;
   // padding-top: 20px;
-
 }
 
 main {
@@ -89,10 +88,11 @@ form {
   button {
     background-color: rgb(0, 0, 0);
     padding: 10px;
-    width: 25%;
+    width: 29.5%;
     height: 50px;
     cursor: pointer;
     color: rgb(221, 198, 198);
+    border-radius: 10px;
   }
 
   input,
@@ -115,15 +115,19 @@ form {
   .info {
     padding: 0 20px;
     width: 60%;
-    
+
     display: flex;
     flex-direction: column;
     // align-items: center;
-   justify-content: space-between;
+    justify-content: space-between;
 
     .dateAndRatings {
       display: flex;
       justify-content: space-between;
+
+      span {
+        font-weight: bold;
+      }
     }
 
     .release-date {
@@ -139,11 +143,10 @@ form {
       text-align: center;
       margin: 10px 0 20px;
     }
-    .trailer-container{
+    .trailer-container {
       width: 100%;
       display: flex;
       justify-content: center;
-      
     }
     .trailer {
       margin: 15px 0;
@@ -176,3 +179,100 @@ footer {
     color: #ea593e;
   }
 }
+
+
+@media (max-width: 925px){
+  form {
+    input {
+      width: 69.5%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .movie-container {
+    .image-container {
+      width: 60%;
+    }
+
+    .info {
+      .overview {
+        line-height: 15px;
+      }
+
+      .trailer {
+        width: 100%;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .movie-container .info .dateAndRatings {
+    flex-direction: column;
+  }
+
+  a {
+    line-height: 20px;
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .movie-container{
+    flex-direction: column;
+
+    .image-container,
+    .info {
+      width: 100%
+    };
+
+    .image-container {
+      background-color: #131212;
+      // max-width: 250px;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+
+    .image-container img {
+      width: 50%;
+    }
+  }
+
+}
+
+@media (max-width: 450px) {
+  form{
+    input,
+    button {
+      width: 100%;
+    }
+
+    button {
+      margin-top: 15px;
+    }
+  }
+}
+
+button:hover,
+button:focus {
+  background-color: #570303;
+}
+
+.button:active {
+  background-color: #222222;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+

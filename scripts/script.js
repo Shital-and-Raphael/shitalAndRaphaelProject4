@@ -35,6 +35,7 @@ moviesApp.userInput = function () {
     const userSearch = $("input").val();
     // console.log(userSearch);
     moviesApp.getMovies(userSearch);
+    $('#input').val('');
   });
 };
 
@@ -56,8 +57,8 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
       <div class='info'>
         <h2>${movie.title}</h2>
         <div class= dateAndRatings>
-          <p class='release-date'>Release date: ${movie.release_date}</p>
-          <p>Ratings: ${movie.vote_average}</p>
+          <p class='release-date'><span>Release Date:</span> ${movie.release_date}</p>
+          <p><span>Ratings:</span> ${movie.vote_average}</p>
         </div>
         <p class='overview'>${movie.overview}</p>
         
@@ -79,3 +80,4 @@ moviesApp.init = function () {
 $(function () {
   moviesApp.init();
 });
+
