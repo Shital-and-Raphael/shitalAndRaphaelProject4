@@ -63,33 +63,6 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
     `);
 };
 
-// moviesApp.displayMovies = function (movie) {
-//   movie.forEach((piece) => {
-//     console.log(piece);
-//     // const title = $("<h2>").text(piece.title);
-//     // const overview = $("<p>").text(piece.overview);
-//     // const image = $("<img>").attr({
-//     //   src: `http://image.tmdb.org/t/p/w300_and_h450_bestv2/${piece.poster_path}`,
-//     //   alt: piece.title,
-//     // });
-//     // $("#results").append(
-//     //   `<div class="test"><img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${piece.poster_path}' alt=""></div>`
-//     // );
-//     $("#results").append(`
-//     <div class="movie-container">
-//       <div class="image-container">
-//         <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${piece.poster_path}' alt=""></div>
-//       <div class='info'>
-//         <h2>${piece.title}</h2>
-//         <p class='release-date'>Release date: ${piece.release_date}</p>
-//         <p>Ratings: ${piece.vote_average}</p>
-//         <p class='overview'>${piece.overview}</p>
-//       <div>
-//     </div>
-//     `);
-//   });
-// };
-
 moviesApp.init = function () {
   moviesApp.userInput();
 };
