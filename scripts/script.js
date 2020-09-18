@@ -53,7 +53,7 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
   $("#results").append(`
     <div class="movie-container">
       <div class="image-container">
-        <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt=""></div>
+        <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt="${movie.title}"></div>
       <div class='info'>
         <h2>${movie.title}</h2>
         <div class= dateAndRatings>
