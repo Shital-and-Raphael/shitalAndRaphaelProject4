@@ -45,12 +45,15 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
   let videoHtml = "";
   trailers.results.forEach((trailer) => {
     //https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
-
+    
     videoHtml += `<li><a href="https://www.youtube.com/watch?v=${trailer.key}" target="_blank" rel="noopener noreferrer">${trailer.name}</a></li>`;
     trailerKey = `${trailer.key}`;
+    
+    
   });
 
-  $("#results").append(`
+  if (trailers.results.length !== 0){
+    $("#results").append(`
     <div class="movie-container">
       <div class="image-container">
         <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt="${movie.title}"></div>
@@ -70,6 +73,25 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
       </div>
     </div>
     `);
+  } else {
+    $("#results").append(`
+    <div class="movie-container">
+      <div class="image-container">
+        <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt="${movie.title}"></div>
+      <div class='info'>
+        <h2>${movie.title}</h2>
+        <div class= dateAndRatings>
+          <p class='release-date'><span>Release Date:</span> ${movie.release_date}</p>
+          <p><span>Ratings:</span> ${movie.vote_average}</p>
+        </div>
+        <p class='overview'>${movie.overview}</p>
+        
+        
+      </div>
+    </div>
+    `);
+  }
+  
 };
 
 moviesApp.init = function () {
