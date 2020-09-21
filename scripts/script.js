@@ -27,28 +27,37 @@ moviesApp.getMovies = function (query) {
   });
 };
 
+// •	Users should be able to type out the movies name. 
 moviesApp.userInput = function () {
+// •	Use jquery .on(‘submit’) to listen for search form submit.
   $("form").on("submit", function (event) {
     $(".welcomeImageContainer").hide();
-    // console.log(" Lets's submit!");
     event.preventDefault();
+    // •	Use search value, from $(this).val(), to make API call to TMDB with query = search value.
     const userSearch = $("input").val();
-    // console.log(userSearch);
     moviesApp.getMovies(userSearch);
     $("#input").val("");
   });
 };
 
+// •	Set response cards into results section.
 moviesApp.addMovieDisplay = function (movie, trailers) {
-  console.log(movie);
-  console.log(trailers);
   let videoHtml = "";
   trailers.results.forEach((trailer) => {
     videoHtml += `<li><a href="https://www.youtube.com/watch?v=${trailer.key}" target="_blank" rel="noopener noreferrer">${trailer.name}</a></li>`;
     trailerKey = `${trailer.key}`;
   });
 
-  if (trailers.results.length !== 0) {
+// •	Use response from API call to create movie information cards using jquery and html. The response will contain a “results” field that is an array with 0 or more objects.  
+if (trailers.results.length !== 0) {
+// •	For each movie result in the “results” field:
+// o	Append poster path to TMDB image url: 
+// o	Use image url as image for card.
+// o	Add rating as number out of 10.
+// o	Add movie title 
+// o	Add synopsis.
+// o	Add release date.
+
     $("#results").append(`
     <div class="movieContainer">
       <div class="imageContainer">

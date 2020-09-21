@@ -493,6 +493,19 @@ footer a {
   color: #ea593e;
 }
 
+button:hover,
+button:focus {
+  background-color: #570303;
+}
+
+.button:active {
+  background-color: #222222;
+  -webkit-box-shadow: 0 5px #666;
+          box-shadow: 0 5px #666;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
 @media (max-width: 925px) {
   form input {
     width: 69.5%;
@@ -563,17 +576,4 @@ footer a {
   form button {
     margin-top: 15px;
   }
-}
-
-button:hover,
-button:focus {
-  background-color: #570303;
-}
-
-.button:active {
-  background-color: #222222;
-  -webkit-box-shadow: 0 5px #666;
-          box-shadow: 0 5px #666;
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
 }
