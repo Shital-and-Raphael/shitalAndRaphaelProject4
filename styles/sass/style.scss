@@ -51,7 +51,7 @@ header {
   justify-content: center;
   align-items: center;
 
-  .header-container {
+  .headerContainer {
     background-color: rgba(255, 255, 255, 0.426);
     width: 100%;
     height: 20vh;
@@ -101,11 +101,11 @@ form {
   }
 }
 
-.welcome-image-container {
+.welcomeImageContainer {
   margin-top: 50px;
 }
 
-.movie-container {
+.movieContainer {
   display: flex;
   justify-content: space-between;
   margin: 50px 0;
@@ -130,7 +130,7 @@ form {
       }
     }
 
-    .release-date {
+    .releaseDate {
       margin-bottom: 10px;
     }
 
@@ -143,11 +143,13 @@ form {
       text-align: center;
       margin: 10px 0 20px;
     }
-    .trailer-container {
+
+    .trailerContainer {
       width: 100%;
       display: flex;
       justify-content: center;
     }
+
     .trailer {
       margin: 15px 0;
       width: 65%;
@@ -155,7 +157,7 @@ form {
     }
   }
 
-  .image-container {
+  .imageContainer {
     width: 30%;
     background-color: black;
     display: flex;
@@ -181,7 +183,7 @@ footer {
 }
 
 
-@media (max-width: 925px){
+@media (max-width: 925px) {
   form {
     input {
       width: 69.5%;
@@ -190,8 +192,8 @@ footer {
 }
 
 @media (max-width: 800px) {
-  .movie-container {
-    .image-container {
+  .movieContainer {
+    .imageContainer {
       width: 60%;
     }
 
@@ -209,7 +211,7 @@ footer {
 }
 
 @media (max-width: 650px) {
-  .movie-container .info .dateAndRatings {
+  .movieContainer .info .dateAndRatings {
     flex-direction: column;
   }
 
@@ -228,15 +230,18 @@ footer {
   h1 {
     font-size: 5rem;
   }
-  .movie-container{
+
+  .movieContainer {
     flex-direction: column;
 
-    .image-container,
+    .imageContainer,
     .info {
       width: 100%
-    };
+    }
 
-    .image-container {
+    ;
+
+    .imageContainer {
       background-color: #131212;
       // max-width: 250px;
       justify-content: center;
@@ -245,7 +250,7 @@ footer {
     }
 
 
-    .image-container img {
+    .imageContainer img {
       width: 50%;
     }
   }
@@ -253,7 +258,8 @@ footer {
 }
 
 @media (max-width: 450px) {
-  form{
+  form {
+
     input,
     button {
       width: 100%;
@@ -275,4 +281,3 @@ button:focus {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-

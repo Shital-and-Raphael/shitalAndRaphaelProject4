@@ -29,13 +29,13 @@ moviesApp.getMovies = function (query) {
 
 moviesApp.userInput = function () {
   $("form").on("submit", function (event) {
-    $(".welcome-image-container").hide();
+    $(".welcomeImageContainer").hide();
     // console.log(" Lets's submit!");
     event.preventDefault();
     const userSearch = $("input").val();
     // console.log(userSearch);
     moviesApp.getMovies(userSearch);
-    $('#input').val('');
+    $("#input").val("");
   });
 };
 
@@ -44,30 +44,26 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
   console.log(trailers);
   let videoHtml = "";
   trailers.results.forEach((trailer) => {
-    //https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
-    
     videoHtml += `<li><a href="https://www.youtube.com/watch?v=${trailer.key}" target="_blank" rel="noopener noreferrer">${trailer.name}</a></li>`;
     trailerKey = `${trailer.key}`;
-    
-    
   });
 
-  if (trailers.results.length !== 0){
+  if (trailers.results.length !== 0) {
     $("#results").append(`
-    <div class="movie-container">
-      <div class="image-container">
+    <div class="movieContainer">
+      <div class="imageContainer">
         <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt="${movie.title}"></div>
       <div class='info'>
         <h2>${movie.title}</h2>
         <div class= dateAndRatings>
-          <p class='release-date'><span>Release Date:</span> ${movie.release_date}</p>
+          <p class='releaseDate'><span>Release Date:</span> ${movie.release_date}</p>
           <p><span>Ratings:</span> ${movie.vote_average}</p>
         </div>
         <p class='overview'>${movie.overview}</p>
         
         <ul>${videoHtml}</ul>
         </ul>  
-        <div class="trailer-container">
+        <div class="trailerContainer">
           <iframe class="trailer" src="https://www.youtube.com/embed/${trailerKey}" frameborder="1px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
@@ -75,13 +71,13 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
     `);
   } else {
     $("#results").append(`
-    <div class="movie-container">
-      <div class="image-container">
+    <div class="movieContainer">
+      <div class="imageContainer">
         <img src='http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}' alt="${movie.title}"></div>
       <div class='info'>
         <h2>${movie.title}</h2>
         <div class= dateAndRatings>
-          <p class='release-date'><span>Release Date:</span> ${movie.release_date}</p>
+          <p class='releaseDate'><span>Release Date:</span> ${movie.release_date}</p>
           <p><span>Ratings:</span> ${movie.vote_average}</p>
         </div>
         <p class='overview'>${movie.overview}</p>
@@ -91,7 +87,6 @@ moviesApp.addMovieDisplay = function (movie, trailers) {
     </div>
     `);
   }
-  
 };
 
 moviesApp.init = function () {
@@ -102,4 +97,3 @@ moviesApp.init = function () {
 $(function () {
   moviesApp.init();
 });
-
