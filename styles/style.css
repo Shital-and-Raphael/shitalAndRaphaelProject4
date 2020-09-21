@@ -431,6 +431,7 @@ form button {
 .movieContainer .info .overview {
   padding: 10px 0;
   line-height: 20px;
+  margin-bottom: 20px;
 }
 
 .movieContainer .info h2 {
